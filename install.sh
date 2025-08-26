@@ -1,4 +1,5 @@
 ansible-galaxy install -r requirements.yml
-ansible-galaxy install -r requirements.yml
 
-ansible-playbook -i $1, install.yml -u root
+user=${2:-root}
+
+ansible-playbook -i $1, playbook.yml -u $user
